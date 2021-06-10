@@ -99,7 +99,7 @@
 				</div>
 				<a class="profile" href="#">
 					<img class="profile__img" src="{{ request.user.profile.photo.url }}" alt="profile-img">
-					<div class="profile__name">Javlon Uchqunov</div>
+					<div class="profile__name">{{user.username}}</div>
 					<div class="profile-dropdown">
 						<a class="profile-dropdown__item" href="#">
 							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +130,7 @@
 					<h3 class="page-title">
             Boshqa qo‘shimcha fanlarni kiritish
 					</h3>
-					<a class="enter" href="#">Kiritish</a>
+					<a href="{% url 'settings:modal_other' %}">Kiritish</a>
 				</div>
 				<div class="container">
 					<div class="build-search">

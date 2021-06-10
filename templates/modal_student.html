@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.min.css" />
-		<link rel="stylesheet" href="css/main.min.css" />
-		<title>O‘quvchi va talabalarni ro‘yhatga olish jurnali</title>
-	</head> 
-  <body>
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Student {% endblock%}
+{% block content %}
     <div id="modal" class="modal active modal-select">
     <form action="#" class="modal-wrapper modal-wrapper_huge modal-space" method="POST">
+    {% csrf_token %}
       <div class="modal-inner">
         <h4 class="modal__title">O‘quvchi va talabalarni ro‘yhatga olish  </h4>
         <div class="modal-select__item modal-three">
@@ -24,12 +19,12 @@
           <div class="modal-select__box">
             <label>Shaxsni tasdiqlovchi hujjat turi</label>
             <div class="radio" style="grid-template-columns: 0.3fr 0.7fr 0.3fr 0.7fr 0.3fr 0.7fr;">
-              <input type="radio" name="doc" id="pass" value="Passport">
-              <label for="pass">Passport</label>
-              <input type="radio" name="doc" id="metrika" value="Metrka">
-              <label for="metrika">Metrka</label>
-              <input type="radio" name="doc" id="id" value="id">
-              <label for="id">ID-Card</label>
+              <input type="text" name="doc" id="pass" placeholder='passport'>
+              <select id="gender" class="modal-input" name="gender">
+                <option value="Guvohnoma">Tug'ilganlik haqida guvohnoma</option>
+                <option value="Passport">Passport</option>
+                <option value="ID-card">Id-card</option>
+              </select>
             </div>
           </div>
         </div>
@@ -46,14 +41,14 @@
             <label for="passport">Passport seriyasi va raqami</label>
             <div class="modal-passport">
               <input id="passport" type="text" class="modal-input" placeholder="AB">
-              <input type="text" class="modal-input" placeholder="1234567">
+              <input type="text" class="modal-input" name='id-number' placeholder="AB1234567">
             </div>
           </div>
         </div>
         <div class="modal-select__item modal-three">
           <div class="modal-select__box">
             <label for="father-name">Otasining ismi</label>
-            <input id="father-name" class="modal-input" type="text" name="father-name" placeholder="Farrux o‘g‘li">
+            <input id="father-name" class="modal-input" type="text" name="middle-name" placeholder="Farrux o‘g‘li">
           </div>
           <div class="modal-select__box">
             <label for="id-code">ID-Kodi </label>
@@ -98,7 +93,7 @@
   
           <div class="modal-select__box">
             <label for="knowledge">O‘quvchining bilim darajasi</label>
-            <input type="text" class="modal-input" name="knowledge" id="knowledge" placeholder="0">
+            <input type="text" class="modal-input" name="level" id="knowledge" placeholder="0">
           </div>
   
           <div class="modal-select__box">
@@ -118,9 +113,9 @@
         <div class="modal-select__box">
           <label for="building">Filial va o‘quv binoni tanlash</label>
           <select id="building" class="modal-input" name="building">
-            <option>Birinchi bino</option>
-            <option>Ikkinchi bino</option>
-            <option>Asosiy bino</option>
+          {% for b in buildings %}
+            <option>{{ b.name }}</option>
+          {% endfor %}
           </select>
         </div>
   
@@ -138,7 +133,7 @@
       
       </div>
   
-      <div class="input-buttons input-buttons_plus">
+      {% comment %} <div class="input-buttons input-buttons_plus">
         <div class="input-buttons__item grey-wrap">
   
           <div class="grey-btn">
@@ -207,16 +202,12 @@
               </div>
           </div>
 
-        </div>
+        </div>{% endcomment %}
         <div class="input-buttons__item">
           <a href="student.html" id="modal-close" class="input-btn">Bekor qilish</a>
           <button class="input-btn input-btn--submit" type="submit">Saqlash</button>
         </div>
-      </div>
+      {% comment %} </div>  {% endcomment %}
     </form>
     </div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="js/libs.min.js"></script>
-		<script src="js/script.js"></script>
-	</body>
-</html>
+{% endblock content %}

@@ -30,8 +30,8 @@ class RoomAdmin(admin.ModelAdmin):
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ['full_name', 'id_code', 'register_date', 'born_date', 'student_age', 'document_type',
-    'id_number', 'level', 'free_time', 'age_level', 'address', 'building_name', 'tel_number',
+    list_display = ['first_name', 'middle_name', 'last_name', 'id_code', 'register_date', 'born_date', 'student_age', 'document_type',
+    'id_number', 'level', 'free_time', 'id_card_number', 'address', 'building_name', 'tel_number',
     'student_login', 'student_password', 'status']
 
 
@@ -62,9 +62,9 @@ class SalaryAdmin(admin.ModelAdmin):
 @admin.register(Staff)
 class StaffAdmin(admin.ModelAdmin):
     list_display = [
-        'full_name', 'register_date', 'born_date',
+        'first_name', 'middle_name', 'last_name', 'id_code', 'id_card_number', 'gender', 'register_date', 'born_date',
         'document_type', 'passport_id', 'role', 'workplace', 'login',
-        'password', 'fired_date', 'reason',
+        'password',
     ]
 
 

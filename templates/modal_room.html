@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Xonalarni kiritish {% endblock %}
+{% block content %}
+    <div id="modal" class="modal active modal-select">
+			<form action="#" class="modal-wrapper modal-select--room" method="POST">
+      {% csrf_token %}
+				<div class="modal-inner">
+					<h4 class="modal__title">O‘quv xonalarini kiritish</h4>
+					<div class="modal-select__item">
+            <div class="modal-select__box">
+            <label for="room">O‘quv bino nomini tanlash </label>
+            <select id="room" class="modal-input" name="building" required>
+            {% for b in buildings %}
+              <option>{{ b.name}}</option>             
+            {% endfor %}
+            </select>
+            </div>
+            <div class="modal-select__box modal-select-plus">
+              <label for="room-type">O‘quv dars xonalar turi</label>
+            <select id="room-type" class="modal-input" name="room-type" required>
+              {% for r in rooms %}
+              <option>{{ r.room_type }}</option>             
+            {% endfor %}
+            </select>
+            <a href="#" class="add-link">+ Yangi qo‘shish</a>
+            </div>
+          </div>
+          <div class="modal-select__item">
+            <div class="modal-select__box modal-select-plus">
+              <label for="room-number">O‘quv xonalarni joylashuv raqami</label>
+              <input id="room-number" class="modal-input" name="room-number" type="number" placeholder="Xona raqami" required>
+            {% comment %} <select id="room-number" class="modal-input" name="room-number" required>
+              {% for r in rooms %}
+              <option>{{ r.room_number }}-xona </option>             
+            {% endfor %}
+            </select> {% endcomment %}
+            <a href="#" class="add-link">+ Yangi qo‘shish</a>
+            </div>
+            <div class="modal-select__box">
+              <label for="room-teacher">Birirktirilgan mas’ul shaxs</label>
+              <input id="room-teacher" class="modal-input" name="room-teacher" type="text" placeholder="Familiya Ism" required>
+            </div>
+          </div>
+				</div>
+				<div class="input-buttons">
+					<a href="{% url 'settings:room' %}" id="modal-close" class="input-btn">Bekor qilish</a>
+				<button class="input-btn input-btn--submit" type="submit">Saqlash</button>
+				</div>
+			</form>
+		</div>
+{% endblock content%}

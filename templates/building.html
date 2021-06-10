@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %} Configurations {% endblock %}
-
 {% block content %}
 		<div class="content">
 			<!-- left side menu -->
@@ -131,7 +130,7 @@
 					<h3 class="page-title">
 						Bino va Filiallar
 					</h3>
-					<a class="enter" href="#">Kiritish</a>
+					<a href="{% url 'settings:modal_building'%}">Kiritish</a>
 				</div>
 				<div class="container">
 					<div class="build-search">
@@ -165,7 +164,7 @@
 								Joylashgan manzili
 							</li>
 							<li class="build-table__item build-table__item--4">
-								Мavjud o‘quv <br> xonalar soni
+								Ishchilar soni
 							</li>
 							<li class="build-table__item build-table__item--5">
 								Qisqacha nomi yoki nik
@@ -177,43 +176,7 @@
 							</li>
 						</ul>
 					</div>
-					<!-- 
-						Jadval ro'yhati
-					-->
-					{% comment %} {% for b in buildings %}
-					<ul class="build-table build-table--light">
-						<li class="build-table__item build-table__item--1">
-							{{ b.id }}
-						</li>
-						<li class="build-table__item build-table__item--2">
-							{{ b.name }}
-						</li>
-						<li class="build-table__item build-table__item--3">
-							{{ b.location }}
-						</li>
-						<li class="build-table__item build-table__item--4">
-							{{ b.room_amount }}
-						</li>
-						<li class="build-table__item build-table__item--5">
-							{{ b.nickname }}
-						</li>
-						<li class="build-table__item build-table__item--6">
-							{{ b.added_time }}
-						</li>
-						<li class="build-table__item build-table__item--7">
-							<ul class="build-table__dropdown">
-								<li class="build-table__dropdown-item btn-edit">
-									<img src="images/dropdown-edit.svg" alt="dropdown icon">
-									Taxrirlash
-								</li>
-								<li class="build-table__dropdown-item">
-									<img src="images/dropdown-delete.svg" alt="dropdown icon">
-									O‘chirish
-								</li>
-							</ul>
-						</li>
-				    </ul>
-					{% endfor %} {% endcomment %}
+				
 					{% for b in buildings %}
 					<ul class="building build-table build-table--light">
 						<li class="build-table__item build-table__item--1">
@@ -247,7 +210,7 @@
 							</ul>
 						</li>
 					</ul>
-					{%endfor%}
+					{% endfor %}
 					<ul class="pagination">
 						<!-- pagination chap ikonka -->
 						<li><a class="pagination__item" href="#"><img src="{% static 'images/pagination-arrow-left.svg' %}" alt="pagination icon"></a></li>
@@ -263,37 +226,5 @@
 			</div>
 		</div>
 		<!-- modal -->
-		<div id="modal" class="modal">
-			<form action="#" class="modal-wrapper" method="POST">
-				<div class="modal-inner">
-					<h4 class="modal__title">Bino va Filiallarni kiritish</h4>
-					<div class="modal-input__item">
-						<label for="address">Joylashgan manzili</label>
-						<input id="address" class="modal-input" type="text" name="address" placeholder="Shaxar, ko‘cha, uy" autocomplete="off">
-					</div>
-					<div class="modal-input__item">
-						<label for="name">Markaz va filiallar nomi</label>
-						<input id="name" class="modal-input" type="text" name="name" placeholder="Birinchi bosh amaliyot markazi" autocomplete="off">
-					</div>
-					<div class="modal-input__item modal-box">
-						<div class="modal-input__box">
-							<label for="nickname">Qisqacha nomi yoki nik</label>
-						<input id="nickname" class="modal-input" type="text" name="nickname" placeholder="Ismi, nik" autocomplete="off">
-						</div>
-						<div class="modal-input__box">
-							<label for="staff-number">Ishchi o‘rni soni</label>
-						<input id="staff-number" class="modal-input" type="number" name="staff-number" placeholder="5" autocomplete="off">
-						</div>
-						<div class="modal-input__box">
-							<label for="date">Kiritilgan sana</label>
-						<input id="date" class="modal-input" type="date" name="date" autocomplete="off">
-						</div>
-					</div>
-				</div>
-				<div class="input-buttons">
-					<button id="modal-close" class="input-btn" type="button">Bekor qilish</button>
-				<button class="input-btn input-btn--submit" type="submit">Saqlash</button>
-				</div>
-			</form>
-		</div>
+		
 {% endblock %}

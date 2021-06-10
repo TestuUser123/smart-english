@@ -51,8 +51,8 @@ class Timetable(models.Model):
     lesson_pattern = models.ForeignKey(Patterns, related_name='lesson_patterns', on_delete=models.CASCADE)
     lesson_type = models.ForeignKey(LessonType, related_name='lessons', on_delete=models.CASCADE)
     group_type = models.ForeignKey(Group, related_name='group_types', on_delete=models.CASCADE)
-    start_time = models.DateField()
-    finish_time = models.DateField()
+    start_time = models.TimeField()
+    finish_time = models.TimeField()
 
     class Meta:
         verbose_name = 'timetable'
@@ -60,10 +60,10 @@ class Timetable(models.Model):
 
 
 class Salary(models.Model):
-    subject_name = models.CharField(max_length=255)
-    lesson_pattern = models.CharField(max_length=255)
-    lesson_type = models.CharField(max_length=255)
-    group_type = models.CharField(max_length=255)
+    subject_name = models.ForeignKey(Subjects, related_name='salary_subject_name', on_delete=models.CASCADE)
+    lesson_pattern = models.ForeignKey(Patterns, related_name='salary_lesson_patterns', on_delete=models.CASCADE)
+    lesson_type = models.ForeignKey(LessonType, related_name='salary_lessons', on_delete=models.CASCADE)
+    group_type = models.ForeignKey(Group, related_name='salary_group_types', on_delete=models.CASCADE)
     month_amount = models.IntegerField()
     monthly_fee = models.IntegerField()
     
@@ -86,7 +86,7 @@ class Building(models.Model):
     location = models.CharField(max_length=255)
     room_amount = models.IntegerField(default=0)
     nickname = models.CharField(max_length=255)
-    added_time = models.DateTimeField()
+    added_time = models.DateField()
 
     def __str__(self):
         return self.name
@@ -97,18 +97,20 @@ class Building(models.Model):
 
 
 class Staff(models.Model):
-    full_name = models.CharField(max_length=250)
-    id_mumber = models.CharField(max_length=250)
+    first_name = models.CharField(max_length=250)
+    middle_name = models.CharField(max_length=250)
+    last_name = models.CharField(max_length=250)
+    id_code = models.CharField(max_length=250)
+    gender = models.CharField(max_length=25)
     register_date = models.DateField()
     born_date = models.DateField()
     document_type = models.CharField(max_length=250)
     passport_id = models.CharField(max_length=250)
+    id_card_number = models.CharField(max_length=25)
     role = models.CharField(max_length=250)
     workplace = models.CharField(max_length=250)
     login = models.CharField(max_length=250)
     password = models.CharField(max_length=250)
-    fired_date = models.DateField()
-    reason = models.CharField(max_length=250)
 
     class Meta:
         verbose_name = 'staff'
@@ -116,8 +118,8 @@ class Staff(models.Model):
 
 
 class Other(models.Model):
-    subject_name = models.CharField(max_length=250)
-    lesson_pattern = models.CharField(max_length=250)
+    subject_name = models.ForeignKey(Subjects, related_name='other_subject_name', on_delete=models.CASCADE)
+    lesson_pattern = models.ForeignKey(Patterns, related_name='other_lesson_patterns', on_delete=models.CASCADE)
     weekly_plan = models.IntegerField()
     monthly_plan = models.IntegerField()
     total_lessons = models.IntegerField()
@@ -130,22 +132,25 @@ class Room(models.Model):
     owner = models.CharField(max_length=100)
 
 class Student(models.Model):
-    full_name = models.CharField(max_length = 150)
+    first_name = models.CharField(max_length = 150)
+    middle_name = models.CharField(max_length=150)
+    last_name = models.CharField(max_length=150)
     id_code = models.CharField(max_length=20)
     register_date = models.DateField(auto_now=False, auto_now_add=True)
     born_date = models.DateField(auto_now=False)
     student_age = models.IntegerField()
     document_type = models.CharField(max_length=150)
     id_number = models.CharField(max_length=20)
+    id_card_number = models.CharField(max_length=25)
     level = models.CharField(max_length=20)
     free_time = models.CharField(max_length=150)
-    age_level = models.CharField(max_length=20)
     address = models.CharField(max_length=150)
     building_name = models.ForeignKey(Building, related_name='student_building', on_delete=models.CASCADE)
     tel_number = models.CharField(max_length=20)
     student_login = models.CharField(max_length=150)
     student_password = models.CharField(max_length=150)
-    status = models.BooleanField()
+    status = models.BooleanField(default=True)
+    gender = models.CharField(max_length=20)
     
     
     

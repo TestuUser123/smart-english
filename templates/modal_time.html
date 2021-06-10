@@ -10,7 +10,7 @@
           <div class="modal-select__item">
             <div class="modal-select__box  modal-select-plus">
               <label for="subject">O‘tiladigan fanlar nomi</label>
-            <select id="subject" class="modal-input" name="subject">
+            <select id="subject" class="modal-input" name="subject" required>
             {% for s in subjects %}
               <option>{{s.name}}</option>
              {% endfor %}
@@ -19,7 +19,7 @@
             </div>
             <div class="modal-select__box">
               <label for="group">Guruhlar turlari</label>
-            <select id="group" class="modal-input" name="group">    
+            <select id="group" class="modal-input" name="group" required>    
               {% for s in groups %}
                 <option>{{ s.group_type }}</option>
              {% endfor %}
@@ -29,7 +29,7 @@
           <div class="modal-select__item">
             <div class="modal-select__box modal-select-plus">
               <label for="subject-type">Dars uslubi</label>
-            <select id="subject-type" class="modal-input" name="subject-type">
+            <select id="subject-type" class="modal-input" name="subject-type" required>
             {% for s in lesson_patterns %}
               <option>{{s.patterns}}</option>
             {% endfor %}
@@ -38,13 +38,13 @@
             </div>
             <div class="modal-select__box">
               <label for="start-time">Darsni boshlanish vaqti </label>
-              <input id="start-time" class="modal-input number-rule" name="start-time" type="text" placeholder="13:00">
+              <input id="start-time" class="modal-input number-rule" name="start-time" type="date" placeholder="1:00:00" required>
             </div>
           </div>
           <div class="modal-select__item">
             <div class="modal-select__box  modal-select-plus">
               <label for="lesson-type">Dars turlari</label>
-            <select id="lesson-type" class="modal-input" name="lesson-type">
+            <select id="lesson-type" class="modal-input" name="lesson-type" required>
               {% for g in lesson_types %}
                 <option>{{g.lesson_types}}</option>
               {% endfor %}
@@ -54,14 +54,14 @@
             </div>
             <div class="modal-select__box">
               <label for="end-time">Darsni tugash vaqti </label>
-              <input id="end-time" class="modal-input number-rule" name="end-time" type="text" placeholder="15:30">
+              <input id="end-time" class="modal-input number-rule" name="end-time" type="time" placeholder="3:30:00" required>
             </div>
           </div>
         </div>
         <div class="input-buttons">
           <a href="{% url 'settings:time'%}" id="modal-close" class="input-btn">Bekor qilish</a>
         <button class="input-btn input-btn--submit" type="submit">
-          <a href="{% url 'settings:time'%}">Saqlash</a>
+         Saqlash
         </button>
         </div>
       </form>

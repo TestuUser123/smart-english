@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.min.css" />
-		<link rel="stylesheet" href="css/main.min.css" />
-		<title>Sozlamalarni kiritish</title>
-	</head>
-	<body>
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Binolarni kiriting {% endblock %}
+{% block content %}
     <div id="modal" class="modal active">
       <form action="#" class="modal-wrapper" method="POST">
+      {% csrf_token %}
         <div class="modal-inner">
           <h4 class="modal__title">Bino va Filiallarni kiritish</h4>
           <div class="modal-input__item">
@@ -31,18 +26,14 @@
             </div>
             <div class="modal-input__box">
               <label for="date">Kiritilgan sana</label>
-            <input id="date" class="modal-input" type="date" name="date" autocomplete="off" value="2021-12-01">
+            <input id="date" class="modal-input" name="date" autocomplete="off" value="2021-12-01">
             </div>
           </div>
         </div>
         <div class="input-buttons">
-          <a href="building.html" id="modal-close" class="input-btn">Bekor qilish</a>
+          <a href="{% url 'settings:building' %}" id="modal-close" class="input-btn">Bekor qilish</a>
         <button class="input-btn input-btn--submit" type="submit">Saqlash</button>
         </div>
       </form>
     </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-</html>
+  {% endblock content %}

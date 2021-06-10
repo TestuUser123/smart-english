@@ -27,4 +27,10 @@ urlpatterns = [
 	path('edit/', views.edit, name='edit'),
 	path('profile/', views.profile, name='profile'),
 	path('modal_time/', views.modal_time, name='modal_time'),
+	path('modal_teacher/', views.modal_teacher, name='modal_teacher'),
+	path('modal_salary/', views.modal_salary, name='modal_salary'),
+	path('modal_building/', views.modal_building, name='modal_building'),
+	path('modal_other/', views.modal_other, name='modal_other'),
+	path('modal_room/', views.modal_room, name='modal_room'),
+	path('modal_student/', views.modal_student, name='modal_student'),
 	]

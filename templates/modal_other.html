@@ -1,34 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.min.css" />
-		<link rel="stylesheet" href="css/main.min.css" />
-		<title>Boshqa qo‘shimcha fanlarni kiritish</title>
-	</head> 
-	<body>
-
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Qo'shimcha {% endblock %}
+	{% block content %}
     <div id="modal" class="modal active modal-select">
 			<form action="#" class="modal-wrapper" method="POST">
+      {% csrf_token %}
 				<div class="modal-inner">
 					<h4 class="modal__title">Asosiy va qo’shimcha fanlarni kiritish</h4>
 					<div class="modal-select__item">
             <div class="modal-select__box modal-select-plus">
               <label for="subject">O‘tiladigan fanlar nomi</label>
             <select id="subject" class="modal-input" name="subject">
-							<option>Ingliz tili</option>
-              <option>Mental arifmetika</option>
-              <option>Koreys tili</option>
+						{% for s in subjects %}
+            	<option>{{s.name}}</option>
+            {% endfor %}
             </select>
             <a href="#" class="add-link">+ Yangi qo‘shish</a>
             </div>
             <div class="modal-select__box modal-select-plus">
               <label for="group">Dars uslubi</label>
-            <select id="group" class="modal-input" name="group">
-              <option>An’anaviy</option>
-              <option>Yangilangan</option>
-              <option>Innovatsion</option>
+            <select id="group" class="modal-input" name="pattern">
+              {% for p in patterns %}
+            	<option>{{ p.patterns}}</option>
+              {% endfor %}
             </select>
             <a href="#" class="add-link">+ Yangi qo‘shish</a>
             </div>
@@ -36,21 +30,21 @@
           <div class="modal-select__item">
             <div class="modal-select__box">
               <label for="subject-time">Bir haftalik darslar rejasi</label>
-							<input id="subject-time" class="modal-input" type="text" name="subject-time" placeholder="3 ta dars" autocomplete="off">
+							<input id="subject-time" class="modal-input" type="text" name="weekly-plan" placeholder="3 ta dars" autocomplete="off">
             </div>
             <div class="modal-select__box">
               <label for="monthly-time">Bir oylik darslar rejasi</label>
-              <input id="monthly-time" class="modal-input" name="monthly-time" type="text" placeholder="12 ta dars">
+              <input id="monthly-time" class="modal-input" name="monthly-plan" type="text" placeholder="12 ta dars">
             </div>
           </div>
           <div class="modal-select__item">
             <div class="modal-select__box">
 							<label for="all-time">O’quv dasturidagi umumiy darslar rejasi </label>
-              <input id="all-time" class="modal-input" name="all-time" type="text" placeholder="192 ta dars">
+              <input id="all-time" class="modal-input" name="total-lessons" type="text" placeholder="192 ta dars">
             </div>
             <div class="modal-select__box">
               <label for="general-time">Umumiy dasturning davomiyligi </label>
-              <input id="general-time" class="modal-input" name="general-time" type="text" placeholder="16 oy">
+              <input id="general-time" class="modal-input" name="course-duration" type="text" placeholder="16 oy">
             </div>
           </div>
 				</div>
@@ -60,8 +54,4 @@
 				</div>
 			</form>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="js/libs.min.js"></script>
-		<script src="js/script.js"></script>
-	</body>
-</html>
+{% endblock content %}

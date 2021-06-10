@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %} Rooms {% endblock %}
-
 {% block content %}
 		<div class="content">
 			<!-- left side menu -->
@@ -131,7 +130,7 @@
 					<h3 class="page-title">
 						O‘quv xonalarni kiritish va uni jurnali
 					</h3>
-					<a class="enter" href="modal-room.html">Kiritish</a>
+					<a href="{% url 'settings:modal_room' %}">Kiritish</a> <!--class='enter' is removed -->
 				</div>
 				<div class="container">
 					<div class="build-search">

@@ -1,35 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.min.css" />
-		<link rel="stylesheet" href="css/main.min.css" />
-		<title>Oylik badal to’lov ta’rif turlarini kiritish va uni jurnali</title>
-	</head> 
-	<body>
+{% extends "base.html" %}
+{% load static%}
+{% block title %}Oylik To'lovlar{% endblock%}
+{% block content %}
     <div id="modal" class="modal active modal-select">
       <form action="#" class="modal-wrapper" method="POST">
+      {% csrf_token %}
         <div class="modal-inner">
           <h4 class="modal__title">Oylik to‘lov tarif rejalarini kiritish</h4>
           <div class="modal-select__item">
             <div class="modal-select__box modal-select-plus">
               <label for="subject">O‘quv fanlar nomi</label>
             <select id="subject" class="modal-input" name="subject">
-              <option>Matematika</option>
-              <option>Ingliz tili</option>
-              <option>Rus tili</option>
-              <option>Arab tili</option>
-              <option>Koreys tili</option>
+              {% for s in subjects %}
+              <option>{{ s.name }}</option>   
+              {% endfor %}           
             </select>
             <a href="#" class="add-link">+ Yangi qo‘shish</a>
             </div>
             <div class="modal-select__box">
               <label for="group">Dars guruhlar turlari</label>
             <select id="group" class="modal-input" name="group">
-              <option>Katta yoshdagilar</option>
-              <option>O’rta yoshdagilar</option>
-              <option>Kichik yoshdagilar</option>
+              {% for s in salary %}
+              <option>{{ s.group_type}}</option>   
+              {% endfor %} 
             </select>
             </div>
           </div>
@@ -37,9 +30,9 @@
             <div class="modal-select__box modal-select-plus">
               <label for="subject-type">Dars uslubi</label>
             <select id="subject-type" class="modal-input" name="subject-type">
-              <option>An’anaviy</option>
-              <option>Yangilangan</option>
-              <option>O‘smirlar</option>
+              {% for p in patterns %}
+              <option>{{ p.patterns }}</option>   
+              {% endfor %} 
             </select>
             <a href="#" class="add-link">+ Yangi qo‘shish</a>
             </div>
@@ -52,9 +45,9 @@
             <div class="modal-select__box modal-select-plus">
               <label for="lesson-type">Dars turlari</label>
             <select id="lesson-type" class="modal-input" name="lesson-type">
-              <option>Asosiy dars</option>
-              <option>Video dars</option>
-              <option>Amaliyot dars</option>
+               {% for t in l_types %}
+              <option>{{ t.lesson_types }}</option>   
+              {% endfor %} 
             </select>
             <a href="#" class="add-link">+ Yangi qo‘shish</a>
             </div>
@@ -65,13 +58,9 @@
           </div>
         </div>
         <div class="input-buttons">
-          <a href="salary.html" id="modal-close" class="input-btn">Bekor qilish</a>
+          <a href="{% url 'settings:salary' %}" id="modal-close" class="input-btn">Bekor qilish</a>
         <button class="input-btn input-btn--submit" type="submit">Saqlash</button>
         </div>
       </form>
     </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-</html>
+{% endblock content %}

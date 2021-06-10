@@ -130,7 +130,7 @@
 					<h3 class="page-title">
 						Oylik badal to’lov ta’rif turlarini kiritish va uni jurnali
 					</h3>
-					<a class="enter" href="#">Kiritish</a>
+					<a  href="{% url 'settings:modal_salary' %}">Kiritish</a>
 				</div>
 				<div class="container">
 					<div class="build-search">
@@ -234,63 +234,5 @@
 			</div>
 		</div>
 		<!-- modal -->
-		<div id="modal" class="modal modal-select">
-			<form action="#" class="modal-wrapper" method="POST">
-				<div class="modal-inner">
-					<h4 class="modal__title">Dars soatlari va turlarni kiritish</h4>
-					<div class="modal-select__item">
-            <div class="modal-select__box">
-              <label for="subject">O‘tiladigan fanlar nomi</label>
-            <select id="subject" class="modal-input" name="subject">
-              <option value="Matematika">Matematika</option>
-              <option value="Ingliz tili">Ingliz tili</option>
-              <option value="Rus tili">Rus tili</option>
-              <option value="Arab tili">Arab tili</option>
-              <option value="Koreys tili">Koreys tili</option>
-            </select>
-            </div>
-            <div class="modal-select__box">
-              <label for="group">Guruhlar turlari</label>
-            <select id="group" class="modal-input" name="group">
-              <option value="Katta yoshdagilar">Katta yoshdagilar</option>
-              <option value="O’rta yoshdagila">O’rta yoshdagilar</option>
-              <option value="Kichik yoshdagilar">Kichik yoshdagilar</option>
-            </select>
-            </div>
-          </div>
-          <div class="modal-select__item">
-            <div class="modal-select__box">
-              <label for="subject-type">Dars uslubi</label>
-            <select id="subject-type" class="modal-input" name="subject-type">
-              <option value="Matematika">An’anaviy</option>
-              <option value="Ingliz tili">Yangilangan</option>
-              <option value="Rus tili">O‘smirlar</option>
-            </select>
-            </div>
-            <div class="modal-select__box">
-              <label for="start-time">Darsni boshlanish vaqti </label>
-              <input id="start-time" class="modal-input number-rule" name="start-time" type="text" placeholder="2 oy">
-            </div>
-          </div>
-          <div class="modal-select__item">
-            <div class="modal-select__box">
-              <label for="lesson-type">Dars turlari</label>
-            <select id="lesson-type" class="modal-input" name="lesson-type">
-              <option value="Asosiy dars">Asosiy dars</option>
-              <option value="Video dars">Video dars</option>
-              <option value="Amaliyot dars">Amaliyot dars</option>
-            </select>
-            </div>
-            <div class="modal-select__box">
-              <label for="end-time">Darsni tugash vaqti </label>
-              <input id="end-time" class="modal-input number-rule" name="end-time" type="text" placeholder="150 00">
-            </div>
-          </div>
-				</div>
-				<div class="input-buttons">
-					<button id="modal-close" class="input-btn" type="button">Bekor qilish</button>
-				<button class="input-btn input-btn--submit" type="submit">Saqlash</button>
-				</div>
-			</form>
-		</div>
+		
 {% endblock content %}
