@@ -64,7 +64,7 @@ def new_group(request):
                 new_group = NewGroup.objects.filter(group_number__icontains=url_parameter)
             else:
                 new_group = NewGroup.objects.all()
-            paginator = Paginator(new_group, 1)
+            paginator = Paginator(new_group, 5)
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
  
@@ -92,7 +92,8 @@ def view_attendance(request):
     return render(request, 'groups/view-attendance.html')
 
 def active_group(request):
-    return render(request, 'groups/group-now.html')
+    english_groups = NewGroup.objects.all().count()
+    return render(request, 'groups/group-now.html', context={'english_groups':english_groups})
 
 def ended_group(request):
     return render(request, 'groups/ended-group.html')

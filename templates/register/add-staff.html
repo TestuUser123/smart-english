@@ -1,0 +1,185 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+			<div class="content-item">
+			<!-- title -->
+				<div class="build-title">
+					<h3 class="page-title">
+						O‘qituvchi va xodimlarni ro‘yxatdan o‘tkazish
+					
+					</h3>
+					<a class="enter"  onclick="addStaff()">Kiritish</a>
+				</div>
+				<div class="container">
+					<div class="build-search build-search_teacher">
+						<div class="build-top">
+							<div class="build-top__item">
+								<input type="text" id="search-text" name="build-search" placeholder="Search">
+								<img class="build-search__img" id="search-icon" src="{% static 'images/search.svg'%}" alt="search">
+
+								<div class="filter">
+									<div class="filter-text">
+										<img class="filter-img" src="{% static 'images/filter.svg'%}" alt="filter-img">
+										Filter <img class="filter-arrow" src="{% static 'images/export-icon-2.svg'%}" alt="filter-arrow">
+									</div>
+									<ul class="filter-list">
+										<li class="filter-list__item">
+											<a href="#">Ishga kirish uchun ro‘yhatga olinganlar</a>
+										</li>
+										<li class="filter-list__item">
+											<a href="#">Ayni faol ishlayotgan hodimlar</a>
+										</li>
+										<li class="filter-list__item">
+											<a href="#">Kasal hodimlar</a>
+										</li>
+										<li class="filter-list__item">
+											<a href="#">Mehnat ta’tilidagi hodimlar</a>
+										</li>
+										<li class="filter-list__item">
+											<a href="#">Ishlab umuman ishdan ketganlar</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="build-top__item build-export__second">
+								<ul class="build-export">
+									<li class="build-export__item">Export</li>
+									<ul class="build-export__dropdown">
+										<li><a href="#"><img src="{% static 'images/word.svg'%}" alt="export icon">Word</a></li>	
+										<li><a href="#"><img src="{% static 'images/excel.svg'%}" alt="export icon">Excel</a></li>
+										<li><a href="#"><img src="{% static 'images/pdf.svg'%}" alt="export icon">Pdf</a></li>
+									</ul>
+								</ul>
+								<div class="build-export__number">
+									<span>Show</span> <input type="number" name="number" value="7">
+								</div>
+
+								<div class="categories">
+									Categories
+									<ul class="categories-list">
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-1">
+											<label for="cat-1">Xodimning  F.I.O</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-2">
+											<label for="cat-2">ID-kodi</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-3">
+											<label for="cat-3">Ro’yxatdan o’tgan sana</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-4">
+											<label for="cat-4">Tug’ilgan sana</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-13">
+											<label for="cat-13">Taqdim qilgan hujjat turi</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-5">
+											<label for="cat-5">Shaxsini tasdiqlovchi
+												hujjat seriya va raqami</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-6">
+											<label for="cat-6">Lavozimi va xizmat
+												vazifasi</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-7">
+											<label for="cat-7">Ish faoliyat joyi</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-8">
+											<label for="cat-8">Login</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-9">
+											<label for="cat-9">Paroli</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-10">
+											<label for="cat-10">Buyruq va mehnat
+												shartnoma raqami</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-11">
+											<label for="cat-11">Ishga qabul qilingan va
+												bekor qilingan sana</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-12">
+											<label for="cat-12">Sababi</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<ul class="teacher-table build-table build-table--bold ">
+							<li class="build-table__item">
+								№
+							</li>
+							<li class="build-table__item">
+								Xodimning  F.I.O
+							</li>
+							<li class="build-table__item">
+								ID-kodi
+							</li>
+							<li class="build-table__item">
+								Ro’yxatdan o’tgan sana
+							</li>
+							<li class="build-table__item">
+								Tug’ilgan sana
+							</li>
+							<li class="build-table__item">
+								Taqdim qilgan hujjat turi
+							</li>
+							<li class="build-table__item">
+								Shaxsini tasdiqlovchi hujjat seriya va raqami
+							</li>
+							<li class="build-table__item">
+								Lavozimi va xizmat vazifasi
+							</li>
+							<li class="build-table__item">
+								Ish faoliyati joyi
+							</li>
+							<li class="build-table__item">
+								Login
+							</li>
+
+							<li class="build-table__item">
+								Paroli
+							</li>
+							<li class="build-table__item">
+								Buyruq va mehnat shartnoma raqami
+							</li>
+							<li class="build-table__item">
+								ishga qabul qilingan va bekor qilingan sana
+							</li>
+							<li class="build-table__item">
+								Sababi
+							</li>
+              				<li class="build-table__item build-table__item--7">
+							</li>
+						</ul>
+					</div>
+					<!-- 
+						Jadval ro'yhati
+					-->
+					
+					<div id="replaceable-content" class="col-6">
+						{% include "register/search/add-staff-results.html" %}
+					</div>
+				</div>
+			</div>
+		</div>
+<script>
+    function addStaff() {
+      window.location.href = '{% url "add-staff" %}?add=true';
+    }
+</script>
+<script src="{% static 'js/add-staff-search.js' %}"></script>
+{% endblock %}

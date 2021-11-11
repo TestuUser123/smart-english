@@ -20,5 +20,6 @@ urlpatterns = [
     path('room/<int:id>/', delete_room),
     path('students/<int:id>/', delete_student),
     path('building/<int:id>/', delete_building),
+    path('teachers/<int:id>/', delete_teacher),
     
 ]

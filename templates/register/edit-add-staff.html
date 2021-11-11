@@ -1,0 +1,107 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+    <div id="modal" class="modal active modal-select">
+      <form action="#" class="modal-wrapper modal-wrapper_huge" method="POST">
+             {% csrf_token %}
+     <input type="hidden" name="action" value="add">
+        <input type="hidden" name="id" value="{{ staff.id }}">
+        <div class="modal-inner">
+          <h4 class="modal__title">O‘qituvchi va hodimlarni ro‘yhatga olish </h4>
+          <div class="modal-select__item modal-three">
+            <div class="modal-select__box">
+              <label for="fname">Ismi</label>
+              <input id="fname" class="modal-input" type="text" value="{{ staff.first_name }}" name="fname" placeholder="Shahzod">
+            </div>
+            <div class="modal-select__box">
+              <label for="birthday">Tug’ilgan sanasi</label>
+              <input id="birthday" class="modal-input" type="date" name="birthday" value="{{ staff.born_date }}">
+            </div>
+            <div class="modal-select__box">
+              <label>Shaxsni tasdiqlovchi hujjat turi</label>
+              <div class="radio">
+                <input type="radio" name="pass" id="pass" value="Passport">
+                <label for="pass">Passport</label>
+                <input type="radio" name="id" id="id">
+                <label for="id">ID-Card</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-select__item modal-three">
+            <div class="modal-select__box">
+              <label for="surname">Familyasi</label>
+              <input id="surname" class="modal-input" type="text" name="surname"  value="{{ staff.middle_name }}" placeholder="Ismoilov">
+            </div>
+            <div class="modal-select__box">
+              <label for="app-date">Ro‘yhatdan o‘tgan sana</label>
+              <input id="app-date" class="modal-input" type="date" name="app-date" value="{{ staff.register_date }}">
+            </div>
+            <div class="modal-select__box">
+              <label for="passport">Passport seriyasi va raqami</label>
+              <div class="modal-passport">
+                <input id="passport" name='passport' type="text" class="modal-input" value="{{ staff.passport_id }}" placeholder="AB">
+                <input type="text" class="modal-input" placeholder="1234567">
+              </div>
+            </div>
+          </div>
+          <div class="modal-select__item modal-three">
+            <div class="modal-select__box">
+              <label for="father-name">Otasining ismi</label>
+              <input id="father-name" class="modal-input" type="text" name="father-name" value="{{ staff.middle_name }}" placeholder="Farrux o‘g‘li">
+            </div>
+            <div class="modal-select__box">
+              <label for="id-code">ID-Kodi </label>
+              <input id="id-code" class="modal-input" type="text" value="{{ staff.id_code }}" name="id-code" placeholder="100007784">
+            </div>
+            <div class="modal-select__box">
+              <label for="id-card">ID-Card raqami</label>
+              <input id="id-card" class="modal-input" type="text" name="id-card" value="{{ staff.id_card_number }}" placeholder="AB1234567">
+            </div>
+            
+          </div>
+          <div class="modal-select__item modal-three">
+            <div class="modal-select__box">
+              <label for="gender">Jinsi</label>
+              <select id="gender" class="modal-input" name="gender" value="{{ staff.gender }}">
+                <option value="Erkak">Erkak</option>
+                <option value="Ayol">Ayol</option>
+              </select>
+            </div>
+            <div class="modal-select__box">
+              <label for="occupation">Xodimning lavozimi</label>
+              <select id="occupation" class="modal-input" value="{{ staff.role }}" name="occupation">
+                <option>Ingliz tili o‘qituvchi</option>
+                <option>Bosh hisobchi</option>
+                <option>Katta o’qituvchi</option>
+              </select>
+            </div>
+            <div class="modal-select__box">
+              <label for="workplace">Ish faoliyat joyi</label>
+              <select id="workplace" class="modal-input" value="{{ staff.workplace }}" name="workplace">
+                <option>Bosh amaliyot markazi</option>
+                <option>Boshqa amaliyot markazi</option>
+              </select>
+            </div>
+            
+          </div>
+          <div class="modal-select__item modal-three">
+            <div class="modal-select__box">
+              <label for="login">Login</label>
+              <input type="text" class="modal-input" name="login" id="login" value="{{ staff.login }}" placeholder="Login">
+            </div>
+            <div class="modal-select__box">
+              <label for="password">Parol</label>
+              <div class="password-wrapper">
+                <input type="text" class="modal-input" name="password" value="{{ staff.password }}" id="password">
+                <div class="password-icon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-buttons">
+        <a href="{% url 'add-staff'%}" id="modal-close" class="input-btn">Bekor qilish</a>
+        <button class="input-btn input-btn--submit" type="submit">Saqlash</button>
+        </div>
+      </form>
+    </div>
+{% endblock %}

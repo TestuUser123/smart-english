@@ -1,0 +1,47 @@
+{% load static %}
+{% if teacher %}
+{% for t in page_obj %}
+					<ul class="room-table build-table build-table--light build-table__item">
+						<li class="build-table__item build-table__item--1">
+							{{ t.id }}
+						</li>
+						<li class="build-table__item build-table__item--2">
+							{{t.teacher_rank}}
+						</li>
+						<li class="build-table__item build-table__item--3">
+							{{t.role}}
+						</li>
+						<li class="build-table__item build-table__item--4">
+							{{t.employees}}
+						</li>
+                        <li class="build-table__item build-table__item--5">
+							{{t.added_time}}
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+									<a href="{% url "teachers" %}?id={{ t.id }}"><img src="{% static 'images/dropdown-edit.svg' %}" alt="dropdown icon">
+										Taxrirlash</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<a href="{% url "teachers" %}{{ t.id }}"><img src="{% static 'images/dropdown-delete.svg' %}" alt="dropdown icon">
+                                        O‘chirish</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					{% endfor %}
+          			<ul class="pagination">
+						{% if page_obj.has_previous %}	
+								<li><a class="pagination__item" href="?page={{ page_obj.previous_page_number }}"><img src="{% static 'images/pagination-arrow-left.svg' %}" alt="pagination icon"></a></li>
+								<li><a class="pagination__item" href="?page=1">1</a></li>	
+							{% endif %}							
+								<li><a class="pagination__item pagination__item--active" href="#">{{ page_obj.number }}</a></li>						
+							{% if page_obj.has_next %}
+								<li><a class="pagination__item" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a></li>
+								<li><a class="pagination__item" href="?page={{ page_obj.next_page_number }}"><img src="{% static 'images/pagination-arrow-right.svg' %}" alt="pagination icon"></li></a>
+							{% endif %}
+					</ul>
+{% else %}
+<h3 class="page-title">No results found</h3>
+{% endif %}

@@ -95,6 +95,10 @@ def add_edit_teacher(form):
     return result
 
 
+def get_teacher(id):
+    return TeacherTypes.objects.get(id=id)
+
+
 def add_edit_salary(form):
     result = {}
     if 'id' in form:

@@ -83,43 +83,42 @@ soni
 					<!-- 
 						Jadval ro'yhati
 					-->
+					{% for g in groups %}
 					<ul class="allGroup-table build-table build-table--light build-table__item">
 						<li class="build-table__item">
-							1
+							{{g.id}}
 						</li>
 						<li class="build-table__item">
-                           <a href="#">G - 00387</a>
+                           <a href="#">{{ g.group_number }}</a>
 						</li>   
 						<li class="build-table__item">
-                            <a href="#">Muhammad Siddiq
-                                Main teacher</a>
+                            <a href="#">{{ g.main_teacher }}<br>
+                                {{g.teacher_role}}</a>
 						</li>
 						<li class="build-table__item">
-							Monday
-14:00
+							{{g.lesson_days}} <br>
+							{{g.lesson_time}}
 						</li>
 						<li class="build-table__item">
-							Adults
+							{{g.group_type}}
 						</li>
 						<li class="build-table__item">
-                            20.05.2021
+                            {{g.first_lesson}}
 						</li>
 						<li class="build-table__item">
-							22.06.2021
+							Finish time
 						</li>
 						<li class="build-table__item">
-							Bosh bino
-1.4-xona
+							{{g.building}}
 						</li>
 						<li class="build-table__item">
-							26.03.2021
-Juma
+							Students
 						</li>
 						<li class="build-table__item">
-							2 nafar
+							Chiqarib yuborilganlar
 						</li>
 						<li class="build-table__item">
-							1 nafar
+							Chegirma olganlar
 						</li>
                         <li class="build-table__item build-table__item--7">
 							<ul class="build-table__dropdown">
@@ -136,367 +135,15 @@ Juma
 							</ul>
 						</li>
 					</ul>
-                    <ul class="allGroup-table build-table build-table--light build-table__item">
-						<li class="build-table__item">
-							2
-						</li>
-						<li class="build-table__item">
-                           <a href="#">G - 00387</a>
-						</li>   
-						<li class="build-table__item">
-                            <a href="#">Muhammad Siddiq
-                                Main teacher</a>
-						</li>
-						<li class="build-table__item">
-							Monday
-14:00
-						</li>
-						<li class="build-table__item">
-							Adults
-						</li>
-						<li class="build-table__item">
-                            20.05.2021
-						</li>
-						<li class="build-table__item">
-							22.06.2021
-						</li>
-						<li class="build-table__item">
-							Bosh bino
-1.4-xona
-						</li>
-						<li class="build-table__item">
-							26.03.2021
-Juma
-						</li>
-						<li class="build-table__item">
-							2 nafar
-						</li>
-						<li class="build-table__item">
-							1 nafar
-						</li>
-                        <li class="build-table__item build-table__item--7">
-							<ul class="build-table__dropdown">
-								<li class="build-table__dropdown-item btn-edit">
-									<a href="modal-teacher.html">
-										<img src="images/dropdown-edit.svg" alt="dropdown icon">
-									Taxrirlash
-									</a>
-								</li>
-								<li class="build-table__dropdown-item">
-									<img src="images/dropdown-delete.svg" alt="dropdown icon">
-									O‘chirish
-								</li>
-							</ul>
-						</li>
-					</ul>
-                    <ul class="allGroup-table build-table build-table--light build-table__item">
-						<li class="build-table__item">
-							3
-						</li>
-						<li class="build-table__item">
-                           <a href="#">G - 00387</a>
-						</li>   
-						<li class="build-table__item">
-                            <a href="#">Muhammad Siddiq
-                                Main teacher</a>
-						</li>
-						<li class="build-table__item">
-							Monday
-14:00
-						</li>
-						<li class="build-table__item">
-							Adults
-						</li>
-						<li class="build-table__item">
-                            20.05.2021
-						</li>
-						<li class="build-table__item">
-							22.06.2021
-						</li>
-						<li class="build-table__item">
-							Bosh bino
-1.4-xona
-						</li>
-						<li class="build-table__item">
-							26.03.2021
-Juma
-						</li>
-						<li class="build-table__item">
-							2 nafar
-						</li>
-						<li class="build-table__item">
-							1 nafar
-						</li>
-                        <li class="build-table__item build-table__item--7">
-							<ul class="build-table__dropdown">
-								<li class="build-table__dropdown-item btn-edit">
-									<a href="modal-teacher.html">
-										<img src="images/dropdown-edit.svg" alt="dropdown icon">
-									Taxrirlash
-									</a>
-								</li>
-								<li class="build-table__dropdown-item">
-									<img src="images/dropdown-delete.svg" alt="dropdown icon">
-									O‘chirish
-								</li>
-							</ul>
-						</li>
-					</ul>
-                    <ul class="allGroup-table build-table build-table--light build-table__item">
-						<li class="build-table__item">
-							4
-						</li>
-						<li class="build-table__item">
-                           <a href="#">G - 00387</a>
-						</li>   
-						<li class="build-table__item">
-                            <a href="#">Muhammad Siddiq
-                                Main teacher</a>
-						</li>
-						<li class="build-table__item">
-							Monday
-14:00
-						</li>
-						<li class="build-table__item">
-							Adults
-						</li>
-						<li class="build-table__item">
-                            20.05.2021
-						</li>
-						<li class="build-table__item">
-							22.06.2021
-						</li>
-						<li class="build-table__item">
-							Bosh bino
-1.4-xona
-						</li>
-						<li class="build-table__item">
-							26.03.2021
-Juma
-						</li>
-						<li class="build-table__item">
-							2 nafar
-						</li>
-						<li class="build-table__item">
-							1 nafar
-						</li>
-                        <li class="build-table__item build-table__item--7">
-							<ul class="build-table__dropdown">
-								<li class="build-table__dropdown-item btn-edit">
-									<a href="modal-teacher.html">
-										<img src="images/dropdown-edit.svg" alt="dropdown icon">
-									Taxrirlash
-									</a>
-								</li>
-								<li class="build-table__dropdown-item">
-									<img src="images/dropdown-delete.svg" alt="dropdown icon">
-									O‘chirish
-								</li>
-							</ul>
-						</li>
-					</ul>
-                    <ul class="allGroup-table build-table build-table--light build-table__item">
-						<li class="build-table__item">
-							5
-						</li>
-						<li class="build-table__item">
-                           <a href="#">G - 00387</a>
-						</li>   
-						<li class="build-table__item">
-                            <a href="#">Muhammad Siddiq
-                                Main teacher</a>
-						</li>
-						<li class="build-table__item">
-							Monday
-14:00
-						</li>
-						<li class="build-table__item">
-							Adults
-						</li>
-						<li class="build-table__item">
-                            20.05.2021
-						</li>
-						<li class="build-table__item">
-							22.06.2021
-						</li>
-						<li class="build-table__item">
-							Bosh bino
-1.4-xona
-						</li>
-						<li class="build-table__item">
-							26.03.2021
-Juma
-						</li>
-						<li class="build-table__item">
-							2 nafar
-						</li>
-						<li class="build-table__item">
-							1 nafar
-						</li>
-                        <li class="build-table__item build-table__item--7">
-							<ul class="build-table__dropdown">
-								<li class="build-table__dropdown-item btn-edit">
-									<a href="modal-teacher.html">
-										<img src="images/dropdown-edit.svg" alt="dropdown icon">
-									Taxrirlash
-									</a>
-								</li>
-								<li class="build-table__dropdown-item">
-									<img src="images/dropdown-delete.svg" alt="dropdown icon">
-									O‘chirish
-								</li>
-							</ul>
-						</li>
-					</ul>
-                    <ul class="allGroup-table build-table build-table--light build-table__item">
-						<li class="build-table__item">
-							6
-						</li>
-						<li class="build-table__item">
-                           <a href="#">G - 00387</a>
-						</li>   
-						<li class="build-table__item">
-                            <a href="#">Muhammad Siddiq
-                                Main teacher</a>
-						</li>
-						<li class="build-table__item">
-							Monday
-14:00
-						</li>
-						<li class="build-table__item">
-							Adults
-						</li>
-						<li class="build-table__item">
-                            20.05.2021
-						</li>
-						<li class="build-table__item">
-							22.06.2021
-						</li>
-						<li class="build-table__item">
-							Bosh bino
-1.4-xona
-						</li>
-						<li class="build-table__item">
-							26.03.2021
-Juma
-						</li>
-						<li class="build-table__item">
-							2 nafar
-						</li>
-						<li class="build-table__item">
-							1 nafar
-						</li>
-                        <li class="build-table__item build-table__item--7">
-							<ul class="build-table__dropdown">
-								<li class="build-table__dropdown-item btn-edit">
-									<a href="modal-teacher.html">
-										<img src="images/dropdown-edit.svg" alt="dropdown icon">
-									Taxrirlash
-									</a>
-								</li>
-								<li class="build-table__dropdown-item">
-									<img src="images/dropdown-delete.svg" alt="dropdown icon">
-									O‘chirish
-								</li>
-							</ul>
-						</li>
-					</ul>
-                    <ul class="allGroup-table build-table build-table--light build-table__item">
-						<li class="build-table__item">
-							7
-						</li>
-						<li class="build-table__item">
-                           <a href="#">G - 00387</a>
-						</li>   
-						<li class="build-table__item">
-                            <a href="#">Muhammad Siddiq
-                                Main teacher</a>
-						</li>
-						<li class="build-table__item">
-							Monday
-14:00
-						</li>
-						<li class="build-table__item">
-							Adults
-						</li>
-						<li class="build-table__item">
-                            20.05.2021
-						</li>
-						<li class="build-table__item">
-							22.06.2021
-						</li>
-						<li class="build-table__item">
-							Bosh bino
-1.4-xona
-						</li>
-						<li class="build-table__item">
-							26.03.2021
-Juma
-						</li>
-						<li class="build-table__item">
-							2 nafar
-						</li>
-						<li class="build-table__item">
-							1 nafar
-						</li>
-                        <li class="build-table__item build-table__item--7">
-							<ul class="build-table__dropdown">
-								<li class="build-table__dropdown-item btn-edit">
-									<a href="modal-teacher.html">
-										<img src="images/dropdown-edit.svg" alt="dropdown icon">
-									Taxrirlash
-									</a>
-								</li>
-								<li class="build-table__dropdown-item">
-									<img src="images/dropdown-delete.svg" alt="dropdown icon">
-									O‘chirish
-								</li>
-							</ul>
-						</li>
-					</ul>
-                    <ul class="allGroup-table build-table build-table--light build-table__item">
-						<li class="build-table__item">
-						</li>
-						<li class="build-table__item">
-                           Jami
-						</li>   
-						<li class="build-table__item">
-                           
-						</li>
-						<li class="build-table__item">
-						
-						</li>
-						<li class="build-table__item">
-						</li>
-						<li class="build-table__item">
-						</li>
-						<li class="build-table__item">
-						</li>
-						<li class="build-table__item">
-                            3 nafar
-						</li>
-						<li class="build-table__item">
-                            6 nafar
-						</li>
-						<li class="build-table__item">
-							2 nafar
-						</li>
-						<li class="build-table__item">
-							1 nafar
-						</li>
-                        <li class="build-table__item">
-						</li>
-					</ul>
-                    
-                   
+					{% endfor %}                  
 					<ul class="pagination">
-						<li><a class="pagination__item" href="#"><img src="images/pagination-arrow-left.svg" alt="pagination icon"></a></li>
+						<li><a class="pagination__item" href="#"><img src="{% static 'images/pagination-arrow-left.svg'%}" alt="pagination icon"></a></li>
 						<li><a class="pagination__item pagination__item--active" href="#">1</a></li>
 						<li><a class="pagination__item" href="#">2</a></li>
 						<li><a class="pagination__item" href="#">3</a></li>
 						<li><a class="pagination__item" href="#">4</a></li>
 						<li class="pagination__item pagination-more">...</li>
-						<li><a class="pagination__item" href="#"><img src="images/pagination-arrow-right.svg" alt="pagination icon"></li></a>
+						<li><a class="pagination__item" href="#"><img src="{% static 'images/pagination-arrow-right.svg'%}" alt="pagination icon"></li></a>
 					</ul> 
 				</div>
 			</div>

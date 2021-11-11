@@ -121,7 +121,7 @@ class Staff(models.Model):
     role = models.ForeignKey(TeacherRole, related_name='teacher_role', on_delete=models.CASCADE)
     workplace = models.ForeignKey(Building, related_name='workplace', on_delete=models.CASCADE)
     login = models.CharField(max_length=250)
-    password = models.CharField(max_length=250)
+    password = models.CharField(max_length=250) 
 
     def __str__(self):
         return self.first_name + self.middle_name + self.last_name

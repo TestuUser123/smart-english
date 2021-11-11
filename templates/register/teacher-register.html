@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.min.css" />
+		<link rel="stylesheet" href="css/main.min.css" />
+		<title>O‘qituvchi va xodimlarni ro‘yxatdan o‘tkazish</title>
+	</head> 
+	<body>
+		<div class="content">
+			<!-- left side menu -->
+			<aside class="navbar">
+				<a class="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+				<div class="btn-close">
+					<img src="images/remove.svg" alt="btn icon">
+				</div>
+				<ul class="menu">
+					<li class="menu__item">
+						<a class="menu__link" href="index.html">
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4 15.3333C4 16.4379 4.89543 17.3333 6 17.3333H12.6667C13.7712 17.3333 14.6667 16.4379 14.6667 15.3333V6C14.6667 4.89543 13.7712 4 12.6667 4H6C4.89543 4 4 4.89543 4 6V15.3333ZM4 26C4 27.1046 4.89543 28 6 28H12.6667C13.7712 28 14.6667 27.1046 14.6667 26V22C14.6667 20.8954 13.7712 20 12.6667 20H6C4.89543 20 4 20.8954 4 22V26ZM17.3333 26C17.3333 27.1046 18.2288 28 19.3333 28H26C27.1046 28 28 27.1046 28 26V16.6667C28 15.5621 27.1046 14.6667 26 14.6667H19.3333C18.2288 14.6667 17.3333 15.5621 17.3333 16.6667V26ZM19.3333 4C18.2288 4 17.3333 4.89543 17.3333 6V10C17.3333 11.1046 18.2288 12 19.3333 12H26C27.1046 12 28 11.1046 28 10V6C28 4.89543 27.1046 4 26 4H19.3333Z" fill="#637798"/>
+						</svg>
+						Bosh sahifa</a></li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M17.3337 21.3333H14.667C13.9337 21.3333 13.3337 20.7333 13.3337 20H4.01366V25.3333C4.01366 26.8 5.21366 28 6.68033 28H25.3337C26.8003 28 28.0003 26.8 28.0003 25.3333V20H18.667C18.667 20.7333 18.067 21.3333 17.3337 21.3333ZM26.667 9.33333H21.3337C21.3337 6.38667 18.947 4 16.0003 4C13.0537 4 10.667 6.38667 10.667 9.33333H5.33366C3.86699 9.33333 2.66699 10.5333 2.66699 12V16C2.66699 17.48 3.85366 18.6667 5.33366 18.6667H13.3337V17.3333C13.3337 16.6 13.9337 16 14.667 16H17.3337C18.067 16 18.667 16.6 18.667 17.3333V18.6667H26.667C28.1337 18.6667 29.3337 17.4667 29.3337 16V12C29.3337 10.5333 28.1337 9.33333 26.667 9.33333ZM13.3337 9.33333C13.3337 7.86667 14.5337 6.66667 16.0003 6.66667C17.467 6.66667 18.667 7.86667 18.667 9.33333H13.3203H13.3337Z" fill="#637798"/>
+							</svg>
+						Qabulxonaga o‘tish
+						</a>
+					</li>
+					<li class="menu__item menu-group">
+						<a class="menu__link menu-link--dropdown" href="#">
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M22.2227 17.5071C24.0493 18.7471 25.3293 20.4271 25.3293 22.6671V26.6671H30.6627V22.6671C30.6627 19.7604 25.9027 18.0404 22.2227 17.5071Z" fill="#637798"/>
+							<path d="M11.9974 15.9987C14.9429 15.9987 17.3307 13.6109 17.3307 10.6654C17.3307 7.71985 14.9429 5.33203 11.9974 5.33203C9.05188 5.33203 6.66406 7.71985 6.66406 10.6654C6.66406 13.6109 9.05188 15.9987 11.9974 15.9987Z" fill="#637798"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M19.996 15.9987C22.9427 15.9987 25.3293 13.612 25.3293 10.6654C25.3293 7.7187 22.9427 5.33203 19.996 5.33203C19.3693 5.33203 18.7827 5.46536 18.2227 5.65203C19.3293 7.02536 19.996 8.77203 19.996 10.6654C19.996 12.5587 19.3293 14.3054 18.2227 15.6787C18.7827 15.8654 19.3693 15.9987 19.996 15.9987Z" fill="#637798"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9987 17.332C8.4387 17.332 1.33203 19.1187 1.33203 22.6654V26.6654H22.6654V22.6654C22.6654 19.1187 15.5587 17.332 11.9987 17.332Z" fill="#637798"/>
+							</svg>
+						Guruhlar
+					</a>
+					<ul class="menu-dropdown">
+						<li class="menu-dropdown__item"><a href="#">Guruhlarni boshqarish</a></li>
+						<li class="menu-dropdown__item"><a href="#">Yangi guruhla tashkil etish</a></li>
+						<li class="menu-dropdown__item"><a href="#">Sozlamalarni kiritish</a></li>
+					</ul>
+					</li>
+					<li class="menu__item menu-finance">
+						<a class="menu__link menu-link--dropdown" href="#">
+							<svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M26.25 12.6667V16.6667C26.25 19.98 21.2125 22.6667 15 22.6667C8.7875 22.6667 3.75 19.98 3.75 16.6667V12.6667C3.75 15.98 8.7875 18.6667 15 18.6667C21.2125 18.6667 26.25 15.98 26.25 12.6667ZM3.75 19.3333C3.75 22.6467 8.7875 25.3333 15 25.3333C21.2125 25.3333 26.25 22.6467 26.25 19.3333V23.3333C26.25 26.6467 21.2125 29.3333 15 29.3333C8.7875 29.3333 3.75 26.6467 3.75 23.3333V19.3333ZM15 16C8.7875 16 3.75 13.3133 3.75 10C3.75 6.68667 8.7875 4 15 4C21.2125 4 26.25 6.68667 26.25 10C26.25 13.3133 21.2125 16 15 16Z" fill="#637798"/>
+								</svg>
+							Moliya
+						</a>
+						<ul class="menu-dropdown">
+							<li class="menu-dropdown__item">
+								<a href="#">Hisobotlarni ko‘tarish</a></li>
+							<li class="menu-dropdown__item">
+								<a href="#">To‘lov kassa</a></li>
+							<li class="menu-dropdown__item">
+								<a href="#">Chiqim kassa</a></li>
+							<li class="menu-dropdown__item">
+								<a href="#">Kunlik kassa hisoboti</a></li>
+							<li class="menu-dropdown__item">
+								<a href="#">Oylik kassa hisoboti</a></li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link menu__link--active" href="config.html">
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M25.5215 17.2535C25.5748 16.8535 25.6015 16.4402 25.6015 16.0002C25.6015 15.5735 25.5748 15.1469 25.5081 14.7469L28.2148 12.6402C28.4548 12.4535 28.5215 12.0935 28.3748 11.8269L25.8148 7.4002C25.6548 7.10686 25.3215 7.01353 25.0281 7.10686L21.8414 8.38686C21.1748 7.88019 20.4681 7.45353 19.6814 7.13353L19.2014 3.74686C19.1481 3.42686 18.8814 3.2002 18.5614 3.2002H13.4414C13.1214 3.2002 12.8681 3.42686 12.8148 3.74686L12.3348 7.13353C11.5481 7.45353 10.8281 7.89353 10.1748 8.38686L6.98811 7.10686C6.69478 7.00019 6.36145 7.10686 6.20145 7.4002L3.65478 11.8269C3.49478 12.1069 3.54811 12.4535 3.81478 12.6402L6.52145 14.7469C6.45478 15.1469 6.40145 15.5869 6.40145 16.0002C6.40145 16.4135 6.42811 16.8535 6.49478 17.2535L3.78811 19.3602C3.54811 19.5469 3.48145 19.9069 3.62812 20.1735L6.18811 24.6002C6.34811 24.8935 6.68145 24.9869 6.97478 24.8935L10.1614 23.6135C10.8281 24.1202 11.5348 24.5469 12.3214 24.8669L12.8014 28.2535C12.8681 28.5735 13.1214 28.8002 13.4414 28.8002H18.5614C18.8814 28.8002 19.1481 28.5735 19.1881 28.2535L19.6681 24.8669C20.4548 24.5469 21.1748 24.1202 21.8281 23.6135L25.0148 24.8935C25.3081 25.0002 25.6415 24.8935 25.8015 24.6002L28.3615 20.1735C28.5215 19.8802 28.4548 19.5469 28.2015 19.3602L25.5215 17.2535ZM16.0014 20.8002C13.3614 20.8002 11.2014 18.6402 11.2014 16.0002C11.2014 13.3602 13.3614 11.2002 16.0014 11.2002C18.6414 11.2002 20.8014 13.3602 20.8014 16.0002C20.8014 18.6402 18.6414 20.8002 16.0014 20.8002Z" fill="#637798"/>
+								</svg>
+						Sozlamalarni kiritish
+						</a>
+					</li>
+				</ul>
+				<a class="logout-btn" href="log-in.html">
+					<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22.6667 10.6667L20.7867 12.5467L22.8933 14.6667H12V17.3333H22.8933L20.7867 19.44L22.6667 21.3333L28 16L22.6667 10.6667ZM6.66667 6.66667H16V4H6.66667C5.2 4 4 5.2 4 6.66667V25.3333C4 26.8 5.2 28 6.66667 28H16V25.3333H6.66667V6.66667Z" fill="#637798"/>
+						</svg>
+						Chiqish
+				</a>
+			</aside>
+		<!-- header -->
+			<header class="header">
+				<div class="btn-wrapper">
+					<div class="menu-btn">
+						<div class="menu-line"></div>
+						<div class="menu-line"></div>
+						<div class="menu-line"></div>
+					</div>
+				</div>
+			<div class="header-info">
+				<a class="header-info__item header-info__item--active" href="#">To‘lovlar</a>
+				<a class="header-info__item" href="#">Xarajatlar</a>
+			</div>
+			<div class="header-profile">
+				<div class="language">
+					<a class="language__item" href="#">Uzb</a>
+					<a class="language__item" href="#">Ўзб</a>
+					<a class="language__item" href="#">Eng</a>
+					<a class="language__item" href="#">Рус</a>
+				</div>
+				<a class="profile" href="#">
+					<img class="profile__img" src="images/profile-img.png" alt="profile-img">
+					<div class="profile__name">Javlon Uchqunov</div>
+					<div class="profile-dropdown">
+						<a class="profile-dropdown__item" href="#">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8ZM8 10C5.33 10 0 11.34 0 14V15C0 15.55 0.45 16 1 16H15C15.55 16 16 15.55 16 15V14C16 11.34 10.67 10 8 10Z" fill="#414141"/>
+								</svg>
+							Profil
+						</a>
+						<a class="profile-dropdown__item" href="#">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.4301 10.98C17.4701 10.66 17.5001 10.34 17.5001 10C17.5001 9.66 17.4701 9.34 17.4301 9.02L19.5401 7.37C19.7301 7.22 19.7801 6.95 19.6601 6.73L17.6601 3.27C17.5401 3.05 17.2701 2.97 17.0501 3.05L14.5601 4.05C14.0401 3.65 13.4801 3.32 12.8701 3.07L12.4901 0.42C12.4601 0.18 12.2501 0 12.0001 0H8.00008C7.75008 0 7.54008 0.18 7.51008 0.42L7.13008 3.07C6.52008 3.32 5.96008 3.66 5.44008 4.05L2.95008 3.05C2.72008 2.96 2.46008 3.05 2.34008 3.27L0.340084 6.73C0.210084 6.95 0.270084 7.22 0.460084 7.37L2.57008 9.02C2.53008 9.34 2.50008 9.67 2.50008 10C2.50008 10.33 2.53008 10.66 2.57008 10.98L0.460084 12.63C0.270084 12.78 0.220084 13.05 0.340084 13.27L2.34008 16.73C2.46008 16.95 2.73008 17.03 2.95008 16.95L5.44008 15.95C5.96008 16.35 6.52008 16.68 7.13008 16.93L7.51008 19.58C7.54008 19.82 7.75008 20 8.00008 20H12.0001C12.2501 20 12.4601 19.82 12.4901 19.58L12.8701 16.93C13.4801 16.68 14.0401 16.34 14.5601 15.95L17.0501 16.95C17.2801 17.04 17.5401 16.95 17.6601 16.73L19.6601 13.27C19.7801 13.05 19.7301 12.78 19.5401 12.63L17.4301 10.98ZM10.0001 13.5C8.07008 13.5 6.50008 11.93 6.50008 10C6.50008 8.07 8.07008 6.5 10.0001 6.5C11.9301 6.5 13.5001 8.07 13.5001 10C13.5001 11.93 11.9301 13.5 10.0001 13.5Z" fill="#414141"/>
+								</svg>
+							Sozlamalar
+						</a>
+						<a class="profile-dropdown__item" href="#">
+							<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14 5L12.59 6.41L14.17 8H6V10H14.17L12.59 11.58L14 13L18 9L14 5ZM2 2H9V0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H9V16H2V2Z" fill="#414141"/>
+								</svg>
+								
+							Chiqish
+						</a>
+					</div>
+				</a>
+			</div>
+			</header>
+			<div class="content-item">
+			<!-- title -->
+				<div class="build-title">
+					<h3 class="page-title">
+						O‘qituvchi va xodimlarni ro‘yxatdan o‘tkazish
+					</h3>
+					<a class="enter" href="modal-teacher.html">Kiritish</a>
+				</div>
+				<div class="container">
+					<div class="build-search build-search_teacher">
+						<div class="build-top">
+							<div class="build-top__item">
+								<input type="text" name="build-search" placeholder="Search">
+								<img class="build-search__img" src="images/search.svg" alt="search">
+
+								<div class="filter">
+									<div class="filter-text">
+										<img class="filter-img" src="images/filter.svg" alt="filter-img">
+										Filter <img class="filter-arrow" src="images/export-icon-2.svg" alt="filter-arrow">
+									</div>
+									<ul class="filter-list">
+										<li class="filter-list__item">
+											<a href="#">Ishga kirish uchun ro‘yhatga olinganlar</a>
+										</li>
+										<li class="filter-list__item">
+											<a href="#">Ayni faol ishlayotgan hodimlar</a>
+										</li>
+										<li class="filter-list__item">
+											<a href="#">Kasal hodimlar</a>
+										</li>
+										<li class="filter-list__item">
+											<a href="#">Mehnat ta’tilidagi hodimlar</a>
+										</li>
+										<li class="filter-list__item">
+											<a href="#">Ishlab umuman ishdan ketganlar</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="build-top__item build-export__second">
+								<ul class="build-export">
+									<li class="build-export__item">Export</li>
+									<ul class="build-export__dropdown">
+										<li><a href="#"><img src="images/word.svg" alt="export icon">Word</a></li>	
+										<li><a href="#"><img src="images/excel.svg" alt="export icon">Excel</a></li>
+										<li><a href="#"><img src="images/pdf.svg" alt="export icon">Pdf</a></li>
+									</ul>
+								</ul>
+								<div class="build-export__number">
+									<span>Show</span> <input type="number" name="number" value="7">
+								</div>
+
+								<div class="categories">
+									Categories
+									<ul class="categories-list">
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-1">
+											<label for="cat-1">Xodimning  F.I.O</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-2">
+											<label for="cat-2">ID-kodi</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-3">
+											<label for="cat-3">Ro’yxatdan o’tgan sana</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-4">
+											<label for="cat-4">Tug’ilgan sana</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-13">
+											<label for="cat-13">Taqdim qilgan hujjat turi</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-5">
+											<label for="cat-5">Shaxsini tasdiqlovchi
+												hujjat seriya va raqami</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-6">
+											<label for="cat-6">Lavozimi va xizmat
+												vazifasi</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-7">
+											<label for="cat-7">Ish faoliyat joyi</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-8">
+											<label for="cat-8">Login</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-9">
+											<label for="cat-9">Paroli</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-10">
+											<label for="cat-10">Buyruq va mehnat
+												shartnoma raqami</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-11">
+											<label for="cat-11">Ishga qabul qilingan va
+												bekor qilingan sana</label>
+										</li>
+										<li class="categories-list__item">
+											<input type="checkbox" name="category" id="cat-12">
+											<label for="cat-12">Sababi</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<ul class="teacher-table build-table build-table--bold ">
+							<li class="build-table__item">
+								№
+							</li>
+							<li class="build-table__item">
+								Xodimning  F.I.O
+							</li>
+							<li class="build-table__item">
+								ID-kodi
+							</li>
+							<li class="build-table__item">
+								Ro’yxatdan o’tgan sana
+							</li>
+							<li class="build-table__item">
+								Tug’ilgan sana
+							</li>
+							<li class="build-table__item">
+								Taqdim qilgan hujjat turi
+							</li>
+							<li class="build-table__item">
+								Shaxsini tasdiqlovchi hujjat seriya va raqami
+							</li>
+							<li class="build-table__item">
+								Lavozimi va xizmat vazifasi
+							</li>
+							<li class="build-table__item">
+								Ish faoliyati joyi
+							</li>
+							<li class="build-table__item">
+								Login
+							</li>
+
+							<li class="build-table__item">
+								Paroli
+							</li>
+							<li class="build-table__item">
+								Buyruq va mehnat shartnoma raqami
+							</li>
+							<li class="build-table__item">
+								ishga qabul qilingan va bekor qilingan sana
+							</li>
+							<li class="build-table__item">
+								Sababi
+							</li>
+              <li class="build-table__item build-table__item--7">
+							</li>
+						</ul>
+					</div>
+					<!-- 
+						Jadval ro'yhati
+					-->
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+									<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="teacher-table build-table build-table--light build-table__item">
+						<li class="build-table__item">
+							1
+						</li>
+						<li class="build-table__item">
+							Shojalilov Muzaffarxon Murtazaxonovich
+						</li>
+						<li class="build-table__item">
+							100007784
+						</li>
+						<li class="build-table__item">
+							04.01.2021 y
+						</li>
+						<li class="build-table__item">
+							11.06.1984
+						</li>
+						<li class="build-table__item">
+							Pasport
+						</li>
+						<li class="build-table__item">
+							AA-4334684
+						</li>
+						<li class="build-table__item">
+							Bosh hisobchi
+						</li>
+						<li class="build-table__item">
+							Bosh amaliyot markazi
+						</li>
+
+						<li class="build-table__item">
+							Sayyid
+						</li>
+						<li class="build-table__item">
+							Sayyid-7784
+						</li>
+						<li class="build-table__item">
+							№ 01/10-002
+						</li>
+						<li class="build-table__item">
+							12.09.2018 y
+						</li>
+						<li class="build-table__item">
+							Arizasiga asosan 	
+						</li>
+						<li class="build-table__item build-table__item--7">
+							<ul class="build-table__dropdown">
+								<li class="build-table__dropdown-item btn-edit">
+										<a href="modal-teacher.html">
+										<img src="images/dropdown-edit.svg" alt="dropdown icon">
+									Taxrirlash
+									</a>
+								</li>
+								<li class="build-table__dropdown-item">
+									<img src="images/dropdown-delete.svg" alt="dropdown icon">
+									O‘chirish
+								</li>
+							</ul>
+						</li>
+					</ul>
+		
+					<ul class="pagination">
+						<!-- pagination chap ikonka -->
+						<li><a class="pagination__item" href="#"><img src="images/pagination-arrow-left.svg" alt="pagination icon"></a></li>
+						<li><a class="pagination__item pagination__item--active" href="#">1</a></li>
+						<li><a class="pagination__item" href="#">2</a></li>
+						<li><a class="pagination__item" href="#">3</a></li>
+						<li><a class="pagination__item" href="#">4</a></li>
+						<li class="pagination__item pagination-more">...</li>
+						<!-- pagination o'ng ikonka -->
+						<li><a class="pagination__item" href="#"><img src="images/pagination-arrow-right.svg" alt="pagination icon"></li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="js/libs.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

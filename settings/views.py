@@ -43,9 +43,10 @@ def teachers(request):
         else:
             ctx = {}
             url_parameter = request.GET.get("q")
+            amount = TeacherTypes.objects.all().count()
 
             if url_parameter:
-                teacher = TeacherTypes.objects.filter(rank__name__icontains=url_parameter)
+                teacher = TeacherTypes.objects.filter(teacher_rank__icontains=url_parameter)
             else:
                 teacher = TeacherTypes.objects.all()
             paginator = Paginator(teacher, 5)
@@ -53,15 +54,22 @@ def teachers(request):
             page_obj = paginator.get_page(page_number) 
             ctx = {
                 'teacher':teacher, 'page_obj':page_obj,
+                'amount':amount,
             }
             if request.is_ajax():
 
                 html = render_to_string(
-                    template_name="settings/search/teacher-results.html", context={'teacher':teacher, 'page_obj':page_obj,}
+                    template_name="settings/search/teacher-results.html", context={'teacher':teacher, 'page_obj':page_obj, 'amount':amount,}
                 )
                 data_dict = {"html_from_view": html}
                 return JsonResponse(data=data_dict, safe=False)
             return render(request, 'teacher.html', context=ctx)
+
+
+def delete_teacher(request, id):
+    teacher = TeacherTypes.objects.get(id=id)
+    teacher.delete()
+    return redirect('/teacher')
 
 
 def salary(request):
@@ -402,5 +410,4 @@ def delete_building(request, id):
     building = Building.objects.get(id=id)
     building.delete()
     return redirect('/building')
-
 

@@ -1,0 +1,38 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %} O‘qituvchi va xodimlarni ro‘yxatdan o‘tkazish {% endblock %}
+{% block content %}
+	<div id="modal" class="modal active">
+      <form action="#" class="modal-wrapper" method="POST">
+       {% csrf_token %}
+       <input type="hidden" name="action" value="add">
+        <input type="hidden" name="id" value="{{ teachers.id }}">
+        <div class="modal-inner">
+          <h4 class="modal__title" style="width: fit-content;">O‘qituvchi va xodimlar turini kiritish</h4>
+          <div class="modal-input__item">
+
+            <label for="position">Lavozim va xizmat turining nomi</label>
+            <input id="position" class="modal-input" type="text" value="{{ teachers.teacher_rank }}" name="position" placeholder="Bosh buxgalter bosh hisobchi" autocomplete="off">
+          </div>
+          <div class="modal-input__item">
+            <label for="vakolat">Vakolati doirasida xizmat vazifasi</label>
+            <input id="vakolat" class="modal-input" type="text" value="{{ teachers.role }}" name="vakolat" placeholder="Moliyaviy departament rahbari" autocomplete="off">
+          </div>
+          <div class="modal-input__item modal-box" style="justify-content: flex-start;">
+            <div class="modal-input__box">
+              <label for="staff-number">Ishchi o‘rni soni</label>
+            <input id="staff-number" class="modal-input" type="number" value="{{ teachers.employees }}" name="staff-number" placeholder="5" autocomplete="off">
+            </div>
+            <div class="modal-input__box">
+              <label for="date">Kiritilgan sana</label>
+            <input id="date" class="modal-input"  name="date" value="{{ teachers.added_time }}" autocomplete="off" value="2021-12-01">
+            </div>
+          </div>
+        </div>
+        <div class="input-buttons">
+          <a href="{% url 'teachers' %}" id="modal-close" class="input-btn">Bekor qilish</a>
+        <button class="input-btn input-btn--submit" type="submit">Saqlash</button>
+        </div>
+      </form>
+    </div>
+{% endblock %}
